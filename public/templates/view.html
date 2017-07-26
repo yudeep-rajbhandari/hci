@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<input ng-model="searchdata.data" placeholder="Title">
+<button ng-click="search()">Search</button>
+<table >
+    <tr>
+        <th>Title</th>
+        <th>Conference</th>
+        <th>Country</th>
+        <th>Year</th>
+        <th>Institution</th>
+        <th>Category</th>
+    </tr>
+    <tr ng-repeat="data in alldatas" >
+
+
+        <td>  <input type="checkbox" checklist-model="deleter" checklist-value="data._id">{{data.Title}} <button ng-click="deletefun(deleter)" ng-if="ngChecked">delete</button> </td>
+        <td>{{data.Conference}}</td>
+        <td>{{data.country}}</td>
+        <td>{{data.Year}}</td>
+        <td>{{data.Institution}}</td>
+        <td>{{data.Category}}</td>
+
+    </tr>
+</table>
+
+</body>
+</html>
