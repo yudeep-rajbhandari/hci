@@ -5,38 +5,82 @@
     <title></title>
     <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/css/dc.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/style.css">
+
+
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+    </script>
 </head>
-<body>
-<div ng-show="showLoader">
-    <img src="./images/loading.gif">
-</div>
-<div class="container" ng-hide="showLoader">
 
+<body >
+<div class="viewdata">
+    <div ng-show="showLoader">
 
-    <div id="test">
-        <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
+        <div id="loader"></div>
     </div>
-    <div id="test1">
-        <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
+    <div class="container" ng-hide="showLoader">
+
+        <div class="row">
+            <div class="col-sm-6 chart1" >
+                <div class="card" >
+                    <div class="card-block" id="test" >
+                        <strong >By year</strong><a  class="reset" href='javascript:dc.filterAll();dc.redrawAll();' style="display: none;">  Reset</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 chart2" >
+                <div class="card" >
+                    <div class="card-block" id="test1" >
+                        <strong>By conference</strong><a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>  Reset</a>
+                `   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-12" >
+                <div class="card graph">
+                    <div class="card-block" id="test2">
+
+                        <select id ="val">
+                            <option value=10 selected="selected">10</option>
+                            <option value=20 >20</option>
+
+                            <option value=30>30</option>
+                            <option value=40>40</option>
+                        </select>
+                        <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row graph1">
+            <div class="col-sm-12">
+                <div class="card ">
+                    <div class="card-block" id="test3">
+                        <strong>Bar Graph</strong><a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'> Reset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row table1">
+            <div class="col-sm-12">
+                <div class="card ">
+                    <div class="card-block">
+                        <table class="table table-hover dc-data-table"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="test2">
-        <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
-
-    </div>
-    <select id ="val">
-        <option value=10 selected="selected">10</option>
-        <option value=20 >20</option>
-
-        <option value=30>30</option>
-        <option value=40>40</option>
-    </select>
-
-    <div id="test3">
-        <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
-    </div>
-    <table class="table table-hover dc-data-table">
-
-    </table>
 </div>
 </body>
 </html>

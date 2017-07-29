@@ -1,11 +1,4 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
 
 
 form {
@@ -24,4 +17,110 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(120, 120, 120, 1), 0 6px 20px 0 rgba(120, 120, 120, 1);
+
+}
+.row {
+    margin-top: 30px;
+}
+.viewdata{
+    background-color:#dcdee0;
+    margin-top: -20px;
+    background-image: url("/images/graph.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* LOADING */
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #3498db;
+    border-radius: 50%;
+    border-top: 16px solid #ffffff;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+
+
+/*ADD FORM*/
+
+.form1{
+    background-color: #4370B2;
+    width: 800px;
+    margin-left:auto;
+    margin-right: auto;
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.data{
+    padding: 10px;
+    padding-top: 15px;
+    padding-left: 15%;
+    padding-right: auto;
+    color: #FFF8BC;
+    background-color: #4370B2 ;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+input, select{
+    height: 50px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+button{
+    margin-top: 20px;
+}
+.heading{
+    height: 120px;
+    background-color: #111A42;
+    color: #FFF8BC;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    padding-left: 35%;
 }

@@ -249,19 +249,19 @@ $scope.visualContent=function() {
 
     //console.log(Category1SumGroup);
     chart
-        .width(768)
-        .height(480)
-        // .slicesCap(4)
-        .innerRadius(100)
+        .width(400)
+        .height(250)
+         .slicesCap(4)
+
         .dimension(YearDimension)
         .group(YearSumGroup)
         .legend(dc.legend())
         .minAngleForLabel(0.1)
     chart1
-        .width(768)
-        .height(480)
+        .width(400)
+        .height(250)
         .slicesCap(10)
-        .innerRadius(100)
+
         .dimension(ConferenceDimension)
         .group(ConferenceSumGroup)
         .legend(dc.legend())
@@ -278,7 +278,7 @@ $scope.visualContent=function() {
         .othersGrouper(false)
 
     chart3
-        .width(1000)
+        .width(900)
         .height(380)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
