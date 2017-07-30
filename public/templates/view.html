@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Tit</title>
     <style>
@@ -19,12 +20,17 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
     </style>
 </head>
 <body>
-<input ng-model="searchdata.data" placeholder="Title">
+<div style="margin-top: 200px;font-size: 2em;margin-left: 400px" id="mover">
+    <h2 id="titlesearch">Search Title here</h2>
+<input ng-model="searchdata.data" placeholder="Title" id="inputid">
 <button ng-click="search()">Search</button>
-<table >
+<button  id="button" ng-click="deletefun(deleter)" ng-if="deleter.length > 0">delete </button>
+</div>
+<table style="position: relative; margin-top: 0px" ng-show="tableshow">
     <tr>
         <th>Title</th>
         <th>Conference</th>
@@ -36,7 +42,8 @@
     <tr ng-repeat="data in alldatas" >
 
 
-        <td>  <input type="checkbox" checklist-model="deleter" checklist-value="data._id">{{data.Title}} <button ng-click="deletefun(deleter)" ng-if="ngChecked">delete</button> </td>
+
+        <td>  <input type="checkbox" checklist-model="deleter" checklist-value="data._id"  >{{data.Title}}  </td>
         <td>{{data.Conference}}</td>
         <td>{{data.country}}</td>
         <td>{{data.Year}}</td>

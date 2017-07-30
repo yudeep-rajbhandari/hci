@@ -126,20 +126,20 @@
                     <li class="active"><a ui-sref="">HCI</a></li>
                     <li ui-sref-active="active" ><a ui-sref="home.homepage">Home</a></li>
                     <li ui-sref-active="active"><a ui-sref="home.viewdata" >View Data</a></li>
-                    <li ui-sref-active="active"><a ui-sref="home.addform" >Add Data</a></li>
-                    <li ui-sref-active="active"><a ui-sref="home.view" >View</a></li>
+                    <li ui-sref-active="active"><a ui-sref="home.addform" ng-if="userData.roles=='admin'" >Add Data</a></li>
+                    <li ui-sref-active="active"><a ui-sref="home.view"ng-if="userData.roles=='admin'" >View</a></li>
 
-
-
-
-
-
-
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
                     <li ui-sref-active="active"><a ui-sref="home.loginform"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><div ng-if="userData"> <span style="color: whitesmoke">{{userData.username}} ({{userData.roles}})</span></div>
+                    <button ng-click="logout()" ng-if="userData"><span class="glyphicon glyphicon-log-in"></span> Logout</button>
+                    </li>
+
+
 
                 </ul>
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!---->
+                <!--</ul>-->
             </div>
         </div>
 

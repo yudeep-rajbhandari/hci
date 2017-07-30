@@ -72,7 +72,7 @@ router.post('/search',function(req,res,next){
 })
 router.post("/deletedata",function (req,res,next) {
     console.log("<<<<<<<<<<<<<");
-    model.remove({_id:req.body.deletedata},function (err,data) {
+    model.remove({_id: {$in:req.body.deletedata}},function (err,data) {
         if(err){
             throw (err);
         }

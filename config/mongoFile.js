@@ -20,7 +20,7 @@ module.exports=function(app){
         app.enable('mongodb');
         console.log('MongoDB connected!');
     });
-    db.once('openUri', function() {
+    db.once('open', function() {
         console.log('MongoDB connection opened!');
     });
     db.on('reconnected', function () {
