@@ -1,4 +1,5 @@
-var app = angular.module('hciproject', ['ui.router', 'BackendService', 'toaster', 'checklist-model','service.authorization']);
+var app = angular.module('hciproject', ['ui.router', 'BackendService', 'toaster', 'checklist-model',
+    'service.authorization']);
 
 app.run(function (principal,$rootScope, VisualService) {
     principal.identity().then(function (data12) {
@@ -7,6 +8,7 @@ app.run(function (principal,$rootScope, VisualService) {
             $rootScope.userData = data12;
         }
     })
+    $rootScope.showLoader=true;
     VisualService.data1();
 
 
@@ -15,6 +17,7 @@ app.run(function (principal,$rootScope, VisualService) {
 app.service('VisualService', function ($rootScope, service) {
     var self = this;
     self.data = [];
+
 
     this.data1 = function () {
 
@@ -25,6 +28,7 @@ app.service('VisualService', function ($rootScope, service) {
             }
             else {
                 self.data = response.data.data;
+                $rootScope.showLoader = false;
             }
         })
     }
@@ -250,7 +254,7 @@ else {
 
 app.controller('VisualController', ['$scope', '$http', '$state', 'service', '$rootScope','principal', '$stateParams', 'VisualService',
     function ($scope, $http, $state, service, $rootScope,principal, $stateParams,VisualService) {
-    $scope.showLoader = true;
+   // $rootScope.showLoader = false;
     $scope.filterchecker = false;
         $scope.visualdata = [];
     var count;
@@ -271,8 +275,11 @@ app.controller('VisualController', ['$scope', '$http', '$state', 'service', '$ro
         return VisualService.data;
     },function (newData,oldData) {
         console.log(newData);
+
         $scope.visualdata=newData;
-        $scope.showLoader = false;
+
+
+
         $scope.visualContent();
 
 

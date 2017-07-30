@@ -130,50 +130,14 @@ angular.module('service.authorization', ['ui.router'])
 
     .run(['$rootScope', '$state', '$stateParams', 'authorization', 'principal',
         function($rootScope, $state, $stateParams, authorization, principal) {
+
             $rootScope.$on('$stateChangeStart', function(event, toState, toStateParams,fromState,fromStateParams) {
                 $rootScope.toState = toState;
                 $rootScope.toStateParams = toStateParams;
                 $rootScope.fromState=fromState;
                 $rootScope.fromStateParams=fromStateParams;
-
                 if (principal.isIdentityResolved()) authorization.authorize();
             });
         }
     ])
-
-/*directive for role based persmission super-admin*/
-
-//.directive('access',['getConstants',function(getConstants){
-//  return{
-//    restrict: 'A',
-//    replace:true,
-//    scope: false,
-//    link: function(scope, element, attrs){
-//
-//      var show = false;
-//      var role=angular.fromJson(localStorage.getItem("demo.identity")).roles;
-//      var roleHierarchy=getConstants.getRoleHierarchy();
-//      console.log(role)
-//      console.log(attrs.access);
-//      var attributes = attrs.access;
-//
-//      var indexOfUserRole = roleHierarchy.indexOf(role);
-//      var indexOfAccessRole=roleHierarchy.indexOf(attributes);
-//
-//        if(indexOfUserRole<=indexOfAccessRole){
-//          show = true;
-//        }
-//
-//
-//
-//      if(!show){
-//        element.children().remove();
-//        element.remove();
-//      }
-//    }
-//
-//  }
-//}]);
-
-
 
