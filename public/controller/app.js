@@ -148,8 +148,8 @@ app.controller('signUpController', ['$scope', '$http', 'toaster', '$state', 'pri
             })
         }
     }])
-app.controller('countrycontroller', ['$scope', '$http', '$state', 'service', '$rootScope', '$stateParams', 'toaster','principal',
-    function ($scope, $http, $state, service, $rootScope, $stateParams, toaster,principal) {
+app.controller('countrycontroller', ['$scope', '$http', '$state', 'service', '$rootScope', '$stateParams', 'toaster','principal','VisualService',
+    function ($scope, $http, $state, service, $rootScope, $stateParams, toaster,principal,VisualService) {
         $scope.formdata = {};
 
 
@@ -166,6 +166,8 @@ app.controller('countrycontroller', ['$scope', '$http', '$state', 'service', '$r
                     console.log("jadai cha");
                     toaster.pop("Success", "You have successfully added data  " + response.data.data.Title);
                     $state.go("home.homepage");
+
+                    VisualService.data1();
                     // toaster.pop("Success","successfully added your note with topic  "+response.data.data.NoteTopic);
                 }
             })
