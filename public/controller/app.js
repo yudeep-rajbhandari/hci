@@ -168,9 +168,7 @@ app.controller('countrycontroller', ['$scope', '$http', '$state', 'service', '$r
                     $state.go("home.homepage");
 
                     VisualService.data1();
-                    if(VisualService.data1().data == null){
-                        $rootScope.showLoader=true;
-                    }
+
                     // toaster.pop("Success","successfully added your note with topic  "+response.data.data.NoteTopic);
                 }
             })
@@ -214,7 +212,7 @@ app.controller('DataController', ['$scope', '$http', '$state', 'service', 'toast
                     toaster.pop("Success", "Successfully deleted ");
                     $scope.deleter=[];
                     VisualService.data1();
-                    $state.reload();
+                    $state.reload();te
 
 
                 }
