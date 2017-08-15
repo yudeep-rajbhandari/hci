@@ -4,113 +4,13 @@
     <title>KNOW BOOKS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="newpage.css">
-    <style>
-
-        .navbar{
-            background-image: none;
-
-        }
-        .navbar-default {
-            background-color: #009688;
-            border-color: #0b7c71;
-        }
-        .navbar-default .navbar-brand {
-            color: #ffffff;
-        }
-        .navbar-default .navbar-brand:hover,
-        .navbar-default .navbar-brand:focus {
-            color: #3fc5b8;
-        }
-        .navbar-default .navbar-text {
-            color: #ffffff;
-        }
-        .navbar-default .navbar-nav > li > a {
-            color: #ffffff;
-        }
-        .navbar-default .navbar-nav > li > a:hover,
-        .navbar-default .navbar-nav > li > a:focus {
-            color: #3fc5b8;
-        }
-        .navbar-default .navbar-nav > li > .dropdown-menu {
-            background-color: #009688;
-        }
-        .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-            color: #ffffff;
-        }
-        .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
-        .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-            color: #3fc5b8;
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-            color: #3fc5b8;
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-nav > .active > a,
-        .navbar-default .navbar-nav > .active > a:hover,
-        .navbar-default .navbar-nav > .active > a:focus {
-            color: #3fc5b8;
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-nav > .open > a,
-        .navbar-default .navbar-nav > .open > a:hover,
-        .navbar-default .navbar-nav > .open > a:focus {
-            color: #3fc5b8;
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-toggle {
-            border-color: #0b7c71;
-        }
-        .navbar-default .navbar-toggle:hover,
-        .navbar-default .navbar-toggle:focus {
-            background-color: #0b7c71;
-        }
-        .navbar-default .navbar-toggle .icon-bar {
-            background-color: #ffffff;
-        }
-        .navbar-default .navbar-collapse,
-        .navbar-default .navbar-form {
-            border-color: #ffffff;
-        }
-        .navbar-default .navbar-link {
-            color: #ffffff;
-        }
-        .navbar-default .navbar-link:hover {
-            color: #3fc5b8;
-        }
-
-        @media (max-width: 767px) {
-            .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-                color: #ffffff;
-            }
-            .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-            .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-                color: #3fc5b8;
-            }
-            .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-            .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-            .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-                color: #3fc5b8;
-                background-color: #0b7c71;
-            }
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </head>
-
-
-<div >
+<body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -131,19 +31,16 @@
 
                     <li ui-sref-active="active"><a ui-sref="home.loginform"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     <li><div ng-if="userData"> <span style="color: whitesmoke">{{userData.username}} ({{userData.roles}})</span></div>
-                    <button ng-click="logout()" ng-if="userData"><span class="glyphicon glyphicon-log-in"></span> Logout</button>
+                    <button class="btn" ng-click="logout()" ng-if="userData"><span class="glyphicon glyphicon-log-in"></span> Logout</button>
                     </li>
 
 
 
                 </ul>
-                <!--<ul class="nav navbar-nav navbar-right">-->
-                    <!---->
-                <!--</ul>-->
             </div>
         </div>
 
     </nav>
     <div ui-view></div>
-</div>
+</body>
 </html>

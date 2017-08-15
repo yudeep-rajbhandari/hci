@@ -20,6 +20,7 @@ input[type=text], select {
 }
 
 .card{
+
     box-shadow: 0 4px 8px 0 rgba(120, 120, 120, 1), 0 6px 20px 0 rgba(120, 120, 120, 1);
 
 }
@@ -27,13 +28,14 @@ input[type=text], select {
     margin-top: 30px;
 }
 .viewdata{
-    background-color:#dcdee0;
+
     margin-top: -20px;
     background-image: url("/images/graph.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /* LOADING */
@@ -89,34 +91,39 @@ input[type=text], select {
 /*ADD FORM*/
 
 .form1{
-    background-color: #4370B2;
+
     width: 800px;
     margin-left:auto;
     margin-right: auto;
+    font-family: 'Comfortaa', cursive;
 
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    margin-bottom: 10px;
 }
+
 .data{
     padding: 10px;
     padding-top: 15px;
     padding-left: 15%;
     padding-right: auto;
     color: #FFF8BC;
-    background-color: #4370B2 ;
+    background-color: #213a54 ;
     font-size: 2em;
     font-weight: bolder;
+}
+label{
+    font-size: 2em;
 }
 
 input, select{
     height: 50px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
+
 button{
     margin-top: 20px;
 }
 .heading{
-    height: 120px;
+    height: 100px;
     background-color: #111A42;
     color: #FFF8BC;
     padding: 20px;
@@ -141,7 +148,7 @@ button{
     background-color: #0b7c71;
 }
 .chart2{
-    background-color: #0e90d2;
+    background: linear-gradient(to bottom, #33ccff 10%, #6699ff 44%);
 }
 
 
@@ -153,17 +160,17 @@ button{
 
 .background{
     /*background-color: #1B62E5;*/
-    background-image: url("/images/image1.jpg") ;
-    background-attachment: scroll;
-    height: 100%;
+    background-image: url("/images/background.png") ;
     height: 100vh;
-    width:100%;
     width: 100vw;
+    width: 100%;
     position: relative;
     text-align: center;
     background-size: cover;
     background-position: center;
-    margin-top: -20px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -30px;
 
 }
 
@@ -171,7 +178,6 @@ button{
     margin-right: auto;
     margin-left: auto;
     padding-top: 150px;
-
     vertical-align: middle;
     white-space: normal;
 
@@ -183,16 +189,17 @@ button{
     display: block;
     text-align: center;
     margin-top: 0px;
-    padding-top: 100px;
+    padding-top: 60px;
     text-align: center;
-    color: white;
+    color: floralwhite;
     text-transform: uppercase;
     font-family: Arial;
     text-decoration:none; ;
-    font-size: 72px;
+    font-size: 8em;
     line-height: 72px;
-    font-family: 'Adelle Sans', arial, sans-serif;
+
     font-weight: bold;
+    font-family: 'Comfortaa', cursive;
 
 
 }
@@ -200,12 +207,12 @@ button{
 .intro > h3{
     display: block;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 30px;
     padding-bottom:1em;
 
     text-align:center;
-    color: white;
-    font-family: 'Adelle Sans', arial, sans-serif;
+    color: floralwhite;
+    font-family: 'Comfortaa', cursive;
 }
 
 #start{
@@ -217,8 +224,8 @@ button{
 
 
     text-transform: uppercase;
-    font-family: Arial;
-    border: 1px solid #fff;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid ;
     text-decoration: none;
     border-radius: 10px;
     opacity: 1;
@@ -228,4 +235,28 @@ a#start:hover{
     border: 2px solid #a2a2a2;
     text-decoration-style: bold;
     /*background-color: #477EE6;*/
+}
+
+
+
+
+.background1{
+
+    margin-top: -20px;
+    background-image: url("/images/new.png") ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.background2{
+    margin-top: -20px;
+    background-image: url("/images/new.png") ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }

@@ -8,29 +8,34 @@
 
 <body class="container ">
 
+<div class="background1">
 <div class="form1 card "  >
     <div class="heading">
         ADD DATA
     </div>
-    <div class="data" name="frm" >
+    <div class="data" name="frm" novalidate>
         <div class="form-group">
             <label for="Conference" class="col-10 col-form-label">Conference</label>
             <div class="col-10">
-                <input class="form-control input-lg"  placeholder="Conference Paper" id="Conference" name="Conference" ng-model="formdata.Conference">
+                <input class="form-control input-lg"  placeholder="Conference Paper" id="Conference" name="conference" ng-model="formdata.Conference" >
             </div>
+
         </div>
+
         <div class="form-group ">
             <label for="title" class="col-10 col-form-label">Paper/Session/Topic/Title </label>
             <div class="col-10">
                 <input class="form-control input-lg" placeholder="Title" id="title" name="title"  ng-model="formdata.Title">
             </div>
         </div>
+
         <div class="form-group ">
             <label for="year" class="col-10 col-form-label">Year</label>
             <div class="col-10">
                 <input class="form-control input-lg"  placeholder="Year" id="year" name="year" ng-model="formdata.Year" >
             </div>
         </div>
+
         <div class="form-group ">
             <label for="session" class="col-10 col-form-label">Session/Category</label>
             <div class="col-10">
@@ -38,6 +43,7 @@
 
             </div>
         </div>
+
         <div class="form-group ">
             <label for="session" class="col-10 col-form-label">Institution</label>
             <div class="col-10">
@@ -62,75 +68,7 @@
 
     </div>
 </div>
+</div>
 </body>
-<!--<body>-->
-
-<!--<div class="form1">-->
-<!--<form  onsubmit="return false">-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Conference </label>-->
-            <!--<input placeholder="Conference Paper" id="Conference" name="Conference" tabindex="1" ng-model="formdata.Conference">-->
-
-    <!--</div>-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Paper/Session/Topic/Title  </label>-->
-            <!--<input placeholder="Title" id="title" name="title" tabindex="2" ng-model="formdata.Title">-->
-
-    <!--</div>-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Year-->
-            <!--<input placeholder="Year" id="year" name="year" tabindex="3" ng-model="formdata.Year" >-->
-        <!--</label>-->
-    <!--</div>-->
-
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Session/Category-->
-            <!--<input placeholder="Session/Category" id="session" name="session" tabindex="4" ng-model="formdata.session">-->
-        <!--</label>-->
-    <!--</div>-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Institution-->
-            <!--<input placeholder="Institution" id="institution" name="institution" tabindex="5" ng-model="formdata.Institution">-->
-        <!--</label>-->
-    <!--</div>-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Location-->
-            <!--<input placeholder="Location" id="location" name="location" tabindex="6" ng-model="formdata.Location">-->
-        <!--</label>-->
-    <!--</div>-->
-    <!--<div class="col-2">-->
-        <!--<label>-->
-            <!--Country-->
-       <!--&lt;!&ndash;     <input placeholder="country" id="country" name="country" tabindex="7" ng-model="formdata.country">-->
-        <!--&ndash;&gt;    <select tabindex="7" ng-model="formdata.country">-->
-
-
-
-                <!--<option ng-repeat="x in country" >{{x}}</option>-->
-
-
-
-
-            <!--</select>-->
-        <!--</label>-->
-    <!--</div>-->
-
-
-
-
-
-
-    <!--<div class="col-submit">-->
-        <!--<button class="submitbtn" ng-click="formsubmit()">Submit Data</button>-->
-    <!--</div>-->
-
-<!--</form>-->
-<!--</div>-->
-<!--</body>-->
+<!
 </html>

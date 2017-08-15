@@ -16,35 +16,31 @@
 
 <body >
 <div style="position: fixed;z-index: 100">
-    <a ng-click="scrollFunc(0)"  >
-    <div class="col-sm-6 " style="margin-left: 10px; margin-top: 10px">
-        <div class="card" >
-            <div class="card-block chart1"  >
-            chart
-            </div>
+
+    <div class="card" style="width: 10rem;">
+        <div class="card-block">
+            <h4 class="card-title">Charts</h4>
+
+            <a ng-click="scrollFunc(0)" class="btn btn-success">Go to chart</a>
         </div>
     </div>
-    </a>
-    <a ng-click="scrollFunc(1)" >
-        <div class="col-sm-6 " style="position: relative;top: 50px;left: 10px; height: auto;">
-            <div class="card" >
-                <div class="card-block chart2"  >
-                    table
-                </div>
-            </div>
+
+    <div class="card " style="width: 10rem; margin-top: 30px">
+        <div class="card-block">
+            <h4 class="card-title">Table</h4>
+            <a ng-click="scrollFunc(1)"  class="btn btn-success">Go to table</a>
         </div>
-    </a>
-<!--<button ng-click="scrollFunc(0)" class="btn btn-primary btn-lg" style="margin-left: 10px; margin-top: 10px" >Chart</button>-->
-<!--<button ng-click="scrollFunc(1)" class="btn btn-success " >Table</button>-->
+    </div>
+
+
 </div>
-<div class="viewdata">
+<div class="viewdata" style="font-family: 'Comfortaa', cursive;">
     <div ng-show="showLoader">
 
         <div id="loader"></div>
     </div>
     <div class="container"  ng-hide="showLoader">
-
-        <div class="row" id="chart123">
+        <div class="row " id="chart123">
             <div class="col-sm-6 " >
                 <div class="card" >
                     <div class="card-block" id="test" >
@@ -62,7 +58,7 @@
             </div>
         </div>
 
-        <div class="row" >
+        <div class="row " >
             <div class="col-sm-12" >
                 <div class="card graph">
                     <div class="card-block" id="test2">
@@ -76,6 +72,7 @@
                         </select>
                         <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();' style='display: none;'>reset</a>
                     </div>
+                    Number of papers per session
                 </div>
             </div>
         </div>

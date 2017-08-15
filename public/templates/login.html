@@ -1,57 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>form</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
-    <style>
-        input.ng-invalid.ng-dirty{
-            border:1px solid red;
-            color: #F97C7C;
-        }
-        button.ng-disabled{
-            background-color:#9CBF9C ;
-        }
-        label.label-group>span{
-            color: red;
-        }
-    </style>
 
-</head>
-<body>
-<div class="form-background">
-    <form name="frm " >
+<body class="container">
+<div class="background2">
 
-        <h1>Log In</h1>
+    <div class="form1 card "  >
+        <div class="heading">
+            LOG IN
+        </div>
+        <div class="data" name="frm" >
 
-        <fieldset>
+            <div class="form-group ">
+                <label for="username" class="col-10 col-form-label">USERNAME</label>
+                <div class="col-10">
+                    <input  class="form-control input-lg" placeholder="Username" id="username" name="username"  ng-model="formdata.userName">
+                </div>
+            </div>
 
 
-            <label class="label-group">Username:
-                <input type="text"  ng-model="formdata.userName" >
-                <!--<span ng-show="frm.email.$touched && frm.email.$error.required"> Required!</span>-->
-                <!--<span ng-show="frm.email.$dirty && frm.email.$error.email">Not an email!!</span>-->
-            </label>
 
-            <label class="label-group">Password:
-                <input type="password" name="password" placeholder="password" ng-model="formdata.password" required ng-maxlength="16" ng-minlength="8">
-                <span ng-show="frm.password.$dirty && frm.password.$error.required"></span>
-                <span ng-show="frm.password.$dirty && frm.password.$error.minlength">Too short</span>
-                <span ng-show="frm.password.$dirty && frm.password.$error.maxlength">Too long</span>
-            </label>
-        </fieldset>
+            <div class="form-group ">
+                <label for="password" class="col-10 col-form-label">Password</label>
+                <div class="col-10">
+                    <input type="password" style="height: 50px;border: 1px solid #ccc; border-radius: 4px;" class="form-control input-lg" placeholder="******" id="password" name="password"  ng-model="formdata.password">
+                </div>
+            </div>
 
-        <button class="submitbtn "  ng-click="checkForm() " >Login</button>
+            <div class="form-group ">
+                <button type="button" ng-click="checkForm()" class=" col-10 btn btn-lg btn-success">Login</button>
+            </div>
 
-    </form>
+        </div>
+    </div>
 </div>
-
-
-<script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
 </body>
-</html>

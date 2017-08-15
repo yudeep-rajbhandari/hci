@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
     <title>Tit</title>
     <style>
         table {
@@ -10,13 +9,11 @@
             border-collapse: collapse;
             width: 100%;
         }
-
         td, th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-
         tr:nth-child(even) {
             background-color: #dddddd;
         }
@@ -24,13 +21,15 @@
     </style>
 </head>
 <body>
-<div style="margin-top: 200px;font-size: 2em;margin-left: 400px" id="mover">
+
+<div style="padding-top: 200px;font-size: 2em; font-family: 'Comfortaa', cursive;margin-left: 400px" id="mover">
     <h2 id="titlesearch">Search Title here</h2>
-<input ng-model="searchdata.data" placeholder="Title" id="inputid">
-<button ng-click="search()">Search</button>
-<button  id="button" ng-click="deletefun(deleter)" ng-if="deleter.length > 0">delete </button>
+    <input style="height: 50px;width:300px;border: 1px solid #ccc; border-radius: 4px;" class="input-lg" ng-model="searchdata.data" placeholder="Title" id="inputid">
+    <button class="btn btn-lg btn-success" ng-click="search()">Search</button>
+    <button class="btn btn-lg btn-warning" id="button" ng-click="deletefun(deleter)" ng-if="deleter.length > 0">delete </button>
 </div>
-<table style="position: relative; margin-top: 0px" ng-show="tableshow">
+
+<table style="position: relative;font-family: 'Comfortaa', cursive; margin-top: 0px" ng-show="tableshow">
     <tr>
         <th>Title</th>
         <th>Conference</th>
@@ -43,7 +42,7 @@
 
 
 
-        <td>  <input type="checkbox" checklist-model="deleter" checklist-value="data._id"  >{{data.Title}}  </td>
+        <td>  <input style="height: auto; box-shadow: none; " type="checkbox" checklist-model="deleter" checklist-value="data._id"  >{{data.Title}}  </td>
         <td>{{data.Conference}}</td>
         <td>{{data.country}}</td>
         <td>{{data.Year}}</td>
