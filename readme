@@ -1,0 +1,15 @@
+Installing
+
+install node.js
+
+Running
+
+From terminal
+
+npm install
+
+node app.js
+
+From browser
+
+localhost:8080
