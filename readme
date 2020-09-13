@@ -1,15 +1,3 @@
-Installing
+Technologies used: AngularJS,Dc js,crossfilter js
 
-install node.js
-
-Running
-
-From terminal
-
-npm install
-
-node app.js
-
-From browser
-
-localhost:8080
+Website available at :http://hcifinal.herokuapp.com/
