@@ -1,7 +1,7 @@
 
 var mongoose=require('mongoose');
 module.exports=function(app){
-    app.mdb="mongodb+srv://yudeep123:yudeep123>@hci.xht35.mongodb.net/<dbname>?retryWrites=true&w=majority";
+    app.mdb="mongodb+srv://yudeep123:yudeep123>@hci.xht35.mongodb.net/hci?retryWrites=true&w=majority";
 
     //app.mdb="mongodb://localhost:27017/takeinfood";
     mongoose.set('debug', true);
