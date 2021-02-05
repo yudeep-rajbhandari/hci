@@ -11,7 +11,7 @@ var data=require('./routes/data');
 
 var app = express();
 
-require('./config/mongoFile')(app);
+//require('./config/mongoFile')(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
