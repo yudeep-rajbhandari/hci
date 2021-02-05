@@ -5,6 +5,8 @@ module.exports=function(app){
 
     //app.mdb="mongodb://localhost:27017/takeinfood";
     mongoose.set('debug', true);
+        mongoose.set('mongos', true);
+
 
 
     var db = mongoose.connection;
@@ -31,5 +33,5 @@ module.exports=function(app){
         console.log('MongoDB disconnected!');
         mongoose.connect(app.mdb, {server:{auto_reconnect:true}});
     });
-    mongoose.connect(app.mdb, {server:{auto_reconnect:true}});
+    mongoose.connect(app.mdb, {server:{auto_reconnect:true},mongos:true});
 };
