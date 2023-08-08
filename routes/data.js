@@ -6,9 +6,7 @@ var express=require('express');
 var router=express.Router();
 var model=require('./../models/data.js');
 
-
 router.get('/getdata',function (req,res,next) {
-
     model.find(function (err,data) {
         console.log('<<<<<<<<');
         console.log('<<<<<<<<');
